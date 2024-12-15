@@ -31,11 +31,34 @@ This project is a Proof of Concept (POC) for a Role-Based Access Control (RBAC) 
 
 The database consists of the following tables:
 
-1. **Users**: Stores user information.
-2. **Roles**: Defines roles that can be assigned to users.
-3. **Permissions**: Lists permissions that can be granted to roles.
-4. **UserRoles**: A join table to associate users with roles.
-5. **RolePermissions**: A join table to associate roles with permissions.
+1. **Users**: Stores user information with roles.
+6. **Products**: Stores product information listed by users.
+7. **WebBuilds**: Stores web build information listed by users.
 
-### Example Schema
+
+## Setup Instructions
+
+1. **Install Go**:
+   - Download and install Go from the [official Go website](https://golang.org/dl/).
+
+2. **Clone the Project**:
+
+3. **Set Up PostgreSQL**:
+- Ensure PostgreSQL is installed and running.
+- Create a new database:
+  ```
+  CREATE DATABASE rbac_db;
+  ```
+
+4. **Configure Database Connection**:
+- Update the database connection settings in `config/config.go` with your PostgreSQL credentials. you can add the connection configuration in .env file 
+
+5. **Install Dependencies**:
+go mod tidy
+
+
+
+6. **Start the Server**:
+go run main.go
+
 
