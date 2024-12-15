@@ -46,19 +46,21 @@ The database consists of the following tables:
 3. **Set Up PostgreSQL**:
 - Ensure PostgreSQL is installed and running.
 - Create a new database:
-  ```
-  CREATE DATABASE rbac_db;
-  ```
+
 
 4. **Configure Database Connection**:
 - Update the database connection settings in `config/config.go` with your PostgreSQL credentials. you can add the connection configuration in .env file 
 
 5. **Install Dependencies**:
-go mod tidy
 
+```
+ go mod tidy
+ ```
 
 
 6. **Start the Server**:
+
+```
 go run main.go
-
-
+ ```
+the server will be running on localhost:8080
